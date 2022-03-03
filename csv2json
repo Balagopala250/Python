@@ -1,0 +1,22 @@
+import csv
+import json
+ 
+def json_write(csvFilePath, jsonFilePath):
+     
+    jsonArray = [] 
+
+    with open(csvFilePath, encoding='utf-8') as csvf:
+        #print(csvf)
+        csvReader = csv.DictReader(csvf)
+        #print(csvReader)
+        for row in csvReader:  
+            jsonArray.append(row)
+
+    with open(jsonFilePath, 'w', encoding='utf-8') as jsonf: 
+        jsonString = json.dumps(jsonArray, indent=4)
+        jsonf.write(jsonString)
+
+csvFilePath = r'D:\Work\Py_new\csv_conversion\csv_json.csv'
+jsonFilePath = r'D:\Work\Py_new\csv_conversion\generated_json_file.json'
+
+json_write(csvFilePath, jsonFilePath)
