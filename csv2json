@@ -20,3 +20,5 @@ csvFilePath = r'D:\Work\Py_new\csv_conversion\csv_json.csv'
 jsonFilePath = r'D:\Work\Py_new\csv_conversion\generated_json_file.json'
 
 json_write(csvFilePath, jsonFilePath)
+
+#D:\Work\Py_new\csv_conversion\csv_json.csv  D:\Work\Py_new\csv_conversion\generated_json_file.json
